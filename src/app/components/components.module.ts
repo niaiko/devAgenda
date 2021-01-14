@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { RouterModule } from '@angular/router';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { NgxFullCalendarModule } from 'ngx-fullcalendar';
+import { NgxSelectModule } from 'ngx-select-ex';
 
 import { BasicelementsComponent } from './basicelements/basicelements.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -13,6 +16,7 @@ import { NucleoiconsComponent } from './nucleoicons/nucleoicons.component';
 import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalBasic } from './modal/modal.component';
+import { AgendaComponent } from './agenda/agenda.component';
 
 @NgModule({
     imports: [
@@ -21,7 +25,10 @@ import { NgbdModalBasic } from './modal/modal.component';
         NgbModule,
         NouisliderModule,
         RouterModule,
-        JwBootstrapSwitchNg2Module
+        JwBootstrapSwitchNg2Module,
+        FullCalendarModule,
+        NgxFullCalendarModule,
+        NgxSelectModule
       ],
     declarations: [
         ComponentsComponent,
@@ -30,7 +37,8 @@ import { NgbdModalBasic } from './modal/modal.component';
         TypographyComponent,
         NucleoiconsComponent,
         NotificationComponent,
-        NgbdModalBasic
+        NgbdModalBasic,
+        AgendaComponent,
     ],
     exports:[ ComponentsComponent ]
 })

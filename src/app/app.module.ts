@@ -6,21 +6,30 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
-import { ToastrModule, ToastrService } from 'ngx-toastr';
-import localeFr from '@angular/common/locales/fr';
-import { NgxSelectModule } from 'ngx-select-ex';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ToastrModule, ToastrService  } from 'ngx-toastr';
+import { NgxFullCalendarModule } from 'ngx-fullcalendar';
+import { FullCalendarModule } from '@fullcalendar/angular';  // for FullCalendar!
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin
+
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { CommonModule, DatePipe, registerLocaleData } from '@angular/common';
+import { FooterComponent } from './shared/footer/footer.component';
+
+FullCalendarModule.registerPlugins([ // register FullCalendar plugins
+    dayGridPlugin,
+    interactionPlugin
+  ]);
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        FooterComponent
     ],
     imports: [
         BrowserAnimationsModule,
@@ -30,17 +39,13 @@ registerLocaleData(localeFr, 'fr');
         AppRoutingModule,
         ComponentsModule,
         ExamplesModule,
-        ToastrModule.forRoot(),
-        ReactiveFormsModule,
-        CommonModule,
-        NgxSelectModule,
-        HttpClientModule,
         PdfViewerModule,
+        ToastrModule,
+        NgxFullCalendarModule,
+        FullCalendarModule,
     ],
     providers: [
-        DatePipe,
-        ToastrService,
-
+        ToastrService ,
     ],
     bootstrap: [AppComponent]
 })
