@@ -1,0 +1,251 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid">
+    <div class="row p-0" id="gradient-header">
+        <div class="col-12 text-center mx-auto p-5">
+            <div class="f-prime large thirds">
+                Image Cards with Gradient Content
+            </div>
+            <div class="f-second text-light">
+                Designed by <a href="https://bootsnipp.com/sarwal" target="_blank" class="text-light">sarwal</a>. 
+                Inspired by <a href="https://bootsnipp.com/YvesWassersleben" target="_blank" class="text-light">YvesWassersleben</a>. 
+                Images referenced from <a href="https://pixabay.com/" target="_blank" class="text-light">pixabay</a>.
+            </div>
+        </div>
+    </div>
+    <div class="row bg-dark p-0">
+        <div class="col-12 mx-auto p-0">
+            <div class="row mx-auto p-2">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 p-2 card">
+                    <div class="thumbnail">
+					    <img src="https://cdn.pixabay.com/photo/2016/12/30/07/59/kitchen-1940174_960_720.jpg">
+					    <div class="caption">
+						    <div class="f-prime sml primes">
+							    Lorem ipsum.
+						    </div>
+						    <div class="f-third text-light">
+							    Lorem ipsum dolor sit amet.
+						    </div>
+						    <hr>
+						    <p>
+						        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Augue neque gravida in fermentum et sollicitudin ac. Cursus sit amet dictum sit amet justo donec enim diam.
+						    </p>
+						    <div class="mb-0">
+							    <a href="#link" class="btn btn-card">View More</a>
+						    </div>
+					    </div>
+				    </div>
+			    </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mx-auto p-2 card">
+                    <div class="thumbnail">
+					    <img src="https://cdn.pixabay.com/photo/2016/01/23/23/52/dining-room-1158266_960_720.jpg">
+					    <div class="caption">
+						    <div class="f-prime sml primes">
+							    Lorem ipsum.
+						    </div>
+						    <div class="f-third text-light">
+							    Lorem ipsum dolor sit amet.
+						    </div>
+						    <hr>
+						    <p>
+						        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Augue neque gravida in fermentum et sollicitudin ac. Cursus sit amet dictum sit amet justo donec enim diam.
+						    </p>
+						    <div class="mb-0">
+							    <a href="#link" class="btn btn-card">View More</a>
+						    </div>
+					    </div>
+				    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mx-auto p-2 card">
+                    <div class="thumbnail">
+                        <img src="https://cdn.pixabay.com/photo/2016/12/30/07/59/kitchen-1940175_960_720.jpg">
+					    <div class="caption">
+						    <div class="f-prime sml primes">
+							    Lorem ipsum.
+						    </div>
+						    <div class="f-third text-light">
+							    Lorem ipsum dolor sit amet.
+						    </div>
+						    <hr>
+						    <p>
+						        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Augue neque gravida in fermentum et sollicitudin ac. Cursus sit amet dictum sit amet justo donec enim diam.
+						    </p>
+						    <div class="mb-0">
+							    <a href="#link" class="btn btn-card">View More</a>
+						    </div>
+					    </div>
+				    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 mx-auto p-2 card">
+                    <div class="thumbnail">
+					    <img src="https://cdn.pixabay.com/photo/2017/08/07/19/04/house-2606823_960_720.jpg">
+					    <div class="caption">
+						    <div class="f-prime sml primes">
+							    Lorem ipsum.
+						    </div>
+						    <div class="f-third text-light">
+							    Lorem ipsum dolor sit amet.
+						    </div>
+						    <hr>
+						    <p>
+						        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Augue neque gravida in fermentum et sollicitudin ac. Cursus sit amet dictum sit amet justo donec enim diam.
+						    </p>
+						    <div class="mb-0">
+							    <a href="#link" class="btn btn-card">View More</a>
+						    </div>
+					    </div>
+				    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<br><br><br><br>
+<div class="col-sm-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-body">
+                <fieldset class="col-sm-12">
+                    <legend>Formulaire de réservation du cours</legend>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+
+
+                            <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                                <mat-step [stepControl]="firstFormGroup">
+                                  <form [formGroup]="firstFormGroup">
+                                    <ng-template matStepLabel>Information</ng-template>
+                                    <div class="col-ms-12">
+                                    <mat-form-field class="col-md-6">
+                                      <mat-label>Domaine de formation</mat-label>
+                                      <mat-select formControlName="firstCtrl" required>
+                                        <mat-option>
+                                        </mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+                                    <mat-form-field class="col-md-6">
+                                        <mat-label>Formation choisie *</mat-label>
+                                        <mat-select formControlName="firstCtrl" required>
+                                        <mat-option>
+                                        </mat-option>
+                                      </mat-select>
+                                    </mat-form-field>
+                                    <br>
+                                    <mat-form-field class="col-md-6">
+                                        <mat-label>Option *</mat-label>
+                                        <mat-select formControlName="firstCtrl" required>
+                                        <mat-option>
+                                        </mat-option>
+                                      </mat-select>
+                                      </mat-form-field>
+                                      <mat-form-field class="col-md-6">
+                                          <mat-label>Elearning</mat-label>
+                                          <mat-select formControlName="firstCtrl" required>
+                                        <mat-option>
+                                        </mat-option>
+                                      </mat-select>
+                                      </mat-form-field>
+                                      <br>
+                                </div> 
+                                <div class="col-9"></div>
+                                    <div class="col-3">
+                                      <button mat-button matStepperNext class="btn btn-block btn-primary" >Suivant</button>
+                                    </div>
+                                  </form>
+                                </mat-step>
+                                <mat-step [stepControl]="secondFormGroup" label="A propos du cours">
+                                  <form [formGroup]="secondFormGroup">
+                                    <mat-form-field class="col-md-4">
+                                        <mat-label>Date debut du cours</mat-label>
+                                        <input matInput [matDatepicker]="picker">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                      </mat-form-field>
+                                      <mat-form-field class="col-md-4">
+                                        <mat-label>Heure debut du cours</mat-label>
+                                        <input matInput type="time" formControlName="secondCtrl" matInput atp-time-picker  />
+                                      </mat-form-field>
+                                      <mat-form-field class="col-md-4">
+                                        <mat-label>Heure fin du cours</mat-label>
+                                        <input matInput type="time" formControlName="secondCtrl" matInput atp-time-picker  />
+                                      </mat-form-field>
+                                      <br>
+                                        <div class="col-sm-6"></div>
+                                        <div class="col-sm-3">
+                                            <button mat-button matStepperPrevious class="btn-danger btn-block">Retour</button>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <button mat-button matStepperNext class="btn-primary btn-block">Suivant</button>
+                                        </div>
+                                      
+                                  </form>
+                                </mat-step>
+
+                                <mat-step [stepControl]="thirdFormGroup" label="Paiement">
+                                    <form [formGroup]="thirdFormGroup">
+                                      
+                                        <mat-form-field class="col-md-6">
+                                            <mat-label>Mode de paiement</mat-label>
+                                            <input matInput placeholder="Ex. Pizza" value="Sushi">
+                                          </mat-form-field>
+                                          <mat-form-field class="col-md-6">
+                                              <mat-label>Numero carte</mat-label>
+                                              <input matInput placeholder="Ex. Pizza" value="Sushi">
+                                          </mat-form-field>
+                                          <br>
+                                          <mat-form-field class="col-md-6">
+                                            <mat-label>Validaton</mat-label>
+                                            <input matInput placeholder="Ex. Pizza" value="Sushi">
+                                          </mat-form-field>
+                                          <mat-form-field class="col-md-6">
+                                              <mat-label>Autre</mat-label>
+                                              <input matInput placeholder="Ex. Pizza" value="Sushi">
+                                          </mat-form-field>
+                                          <br>
+                                        <br>
+                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-3">
+                                        <button mat-button matStepperPrevious class="btn-danger btn-block">Retour</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button mat-button matStepperNext class="btn-primary btn-block">Suivant</button>
+                                    </div>
+                                        
+                                    </form>
+                                  </mat-step>
+
+
+                                <mat-step>
+                                  <ng-template matStepLabel>Validation</ng-template>
+                                  <p>Etes vous prets?</p>
+                                  <div>
+                                    <button mat-button matStepperPrevious>Valider</button>
+                                    <button mat-button (click)="stepper.reset()">Reset</button>
+                                  </div>
+                                </mat-step>
+                              </mat-horizontal-stepper>
+
+
+
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

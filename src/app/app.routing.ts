@@ -9,6 +9,7 @@ import { LoginComponent } from './examples/login/login.component';
 import { ProfileComponent } from './examples/profile/profile.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { AgendaComponent } from './components/agenda/agenda.component';
+import { FormAjoutAgendaComponent } from './components/agenda/form-ajout-agenda/form-ajout-agenda.component';
 
 
 const routes: Routes =[
@@ -18,7 +19,9 @@ const routes: Routes =[
     { path: 'examples/landing',     component: LandingComponent },
     { path: 'examples/login',       component: LoginComponent },
     { path: 'examples/profile',     component: ProfileComponent },
-    { path: 'agenda',     component: AgendaComponent }
+    { path: 'agenda',               component: AgendaComponent },
+    { path: 'ajout/agenda',               component: FormAjoutAgendaComponent },
+    
 ];
 
 @NgModule({
