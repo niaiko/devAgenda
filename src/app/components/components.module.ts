@@ -27,6 +27,7 @@ import { FormationComponent } from './Formation/formation/formation.component';
 import { LoginAuthComponent } from './Authentification/connection/login-auth/login-auth/login-auth.component';
 import { DetailFormationComponent } from './Formation/detail-information/detail-formation/detail-formation.component';
 import { AgendaComponent } from './Agenda/agenda/agenda.component';
+import { AdminformationComponent } from './Formation/Admin-formation/adminformation/adminformation.component';
 //import { FooterComponent } from 'app/shared/footer/footer/footer.component';
 
 
@@ -54,7 +55,7 @@ import { AgendaComponent } from './Agenda/agenda/agenda.component';
         NgbdModalBasic,
         AccueilComponent,
         FormationComponent,        
-        LoginAuthComponent, DetailFormationComponent, AgendaComponent, 
+        LoginAuthComponent, DetailFormationComponent, AgendaComponent, AdminformationComponent, 
     ],
     exports:[ ComponentsComponent ]
 })

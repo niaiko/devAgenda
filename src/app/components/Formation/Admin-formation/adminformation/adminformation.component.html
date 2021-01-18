@@ -1,0 +1,178 @@
+<br><br><br><br>
+<div class="col-md-10 ml-auto col-xl-12 mr-auto">
+    <p class="category text-center">Liste des formations</p>
+    <!-- Tabs with Background on Card -->
+    <div class="card">
+      <div class="nav-tabs-navigation" data-tabs-color="black">
+          <div class="nav-tabs-wrapper table-responsive">
+              <ngb-tabset [justify]="'center'" class="text-center" >
+                  <ngb-tab  title="Formation" >
+                    <ng-template ngbTabContent>
+                        <table class="table table-striped ">
+                            <thead>
+                              <tr class="w-25">
+                                <th>Libelle</th>
+                                <th>Categorie</th>
+                                <th>Cout</th>
+                                <th>Durée</th> 
+                                <th>version</th>    
+                                <th>Action</th>                           
+                              </tr>
+                            </thead>
+                            <tbody *ngIf="!show">
+                              <tr class="w-25">
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td><button class="btn btn-info"><i class="fa fa-edit" style="font-size:10px"></i>Modifier</button>
+                                    <button class="btn btn-danger"><i class="fa fa-trash-o" style="font-size:10px"></i>Suprimmer</button>                                
+                                </td>
+                                
+                              </tr>
+              
+                            </tbody>
+                            <tbody *ngIf="show">
+                              <tr>
+                                <td colspan="14">
+                                  <app-loader [show]="show"></app-loader>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab  title="Creer formation" >
+                    <ng-template ngbTabContent>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="panel">
+                                    <div class="panel-body">
+                                      <fieldset class="col-md-12">
+                                        <legend>Ajouter une formation</legend>
+                                        <div class="panel">
+                                          <div class="panel-body">
+                                            <div class="row interligne">
+                                              <div class="col-12">
+                                                <table class="table table-bordered">
+                                                  <tr>
+                                                    <td>Libelle</td>
+                                                    <td>Categorie</td>
+                                                    <td>Cout</td>
+                                                    <td>Durree</td>
+                                                    <td>Fichier</td>
+                                                    <td>Description</td>
+                                                  </tr>
+                                                  <tr >
+                                                    <td></td>
+                                                    <td><span></span></td>
+                                                    <td></td>
+                                                    <td> <br></td>
+                                                    <td><textarea class="form-control"></textarea></td>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                      <button class="btn btn-success  btn-block" ><span
+                                                          class="fa fa-plus"></span>Enregistrer</button>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </fieldset>
+                                      <div class="clearfix"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                         
+                          </div>
+                        
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab  title="Video" >
+                    <ng-template ngbTabContent>
+                        <table class="table table-striped ">
+                            <thead>
+                              <tr class="w-25">
+                                <th>Libelle</th>
+                                <th>Categorie</th>
+                                <th>Cout</th>
+                                <th>Durée</th> 
+                                <th>version video</th>    
+                                <th>Action</th>                           
+                              </tr>
+                            </thead>
+                            <tbody *ngIf="!show">
+                              <tr class="w-25">
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td><button class="btn btn-info"><i class="fa fa-edit" style="font-size:10px"></i>Modifier</button>
+                                    <button class="btn btn-danger"><i class="fa fa-trash-o" style="font-size:10px"></i>Suprimmer</button>                                
+                                </td>
+                                
+                              </tr>
+              
+                            </tbody>
+                            <tbody *ngIf="show">
+                              <tr>
+                                <td colspan="14">
+                                  <app-loader [show]="show"></app-loader>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab  title="PDF" >
+                    <ng-template ngbTabContent>
+                        <table class="table table-striped ">
+                            <thead>
+                              <tr class="w-25">
+                                <th>Libelle</th>
+                                <th>Categorie</th>
+                                <th>Cout</th>
+                                <th>Durée</th> 
+                                <th>version PDF</th>    
+                                <th>Action</th>                           
+                              </tr>
+                            </thead>
+                            <tbody *ngIf="!show">
+                              <tr class="w-25">
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td>AAA</td>
+                                <td><button class="btn btn-info"><i class="fa fa-edit" style="font-size:10px"></i>Modifier</button>
+                                    <button class="btn btn-danger"><i class="fa fa-trash-o" style="font-size:10px"></i>Suprimmer</button>                                
+                                </td>
+                                
+                              </tr>
+              
+                            </tbody>
+                            <tbody *ngIf="show">
+                              <tr>
+                                <td colspan="14">
+                                  <app-loader [show]="show"></app-loader>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </ng-template>
+                  </ngb-tab>
+              </ngb-tabset>
+          </div>
+      </div>
+    </div>
+    <!-- End Tabs on plain Card -->
+</div>

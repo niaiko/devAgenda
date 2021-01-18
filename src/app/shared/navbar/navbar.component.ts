@@ -67,4 +67,8 @@ export class NavbarComponent implements OnInit {
         this.router.navigate(['/agenda'])
 
     }
+    navigateAdminFormation() {
+        this.router.navigate(['/Liste/formation'])
+
+    }
 }

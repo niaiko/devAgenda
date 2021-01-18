@@ -12,6 +12,7 @@ import { FormationComponent } from './components/Formation/formation/formation.c
 import { LoginAuthComponent } from './components/Authentification/connection/login-auth/login-auth/login-auth.component';
 import { DetailFormationComponent } from './components/Formation/detail-information/detail-formation/detail-formation.component';
 import { AgendaComponent } from './components/Agenda/agenda/agenda.component';
+import { AdminformationComponent } from './components/Formation/Admin-formation/adminformation/adminformation.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes =[
     { path: 'Authentification',component: LoginAuthComponent },
     { path: 'Details-formation',component: DetailFormationComponent },
     { path: 'agenda',component: AgendaComponent },
+    { path: 'Liste/formation',component: AdminformationComponent },
 
     
 
