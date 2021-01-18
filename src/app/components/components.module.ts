@@ -17,9 +17,18 @@ import { TypographyComponent } from './typography/typography.component';
 import { NucleoiconsComponent } from './nucleoicons/nucleoicons.component';
 import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
+
+
+
+
 import { NgbdModalBasic } from './modal/modal.component';
-import { AgendaComponent } from './agenda/agenda.component';
-import { FormAjoutAgendaComponent } from './agenda/form-ajout-agenda/form-ajout-agenda.component';
+import { AccueilComponent } from './Accueill/accueil/accueil.component';
+import { FormationComponent } from './Formation/formation/formation.component';
+import { LoginAuthComponent } from './Authentification/connection/login-auth/login-auth/login-auth.component';
+import { DetailFormationComponent } from './Formation/detail-information/detail-formation/detail-formation.component';
+import { AgendaComponent } from './Agenda/agenda/agenda.component';
+//import { FooterComponent } from 'app/shared/footer/footer/footer.component';
+
 
 @NgModule({
     imports: [
@@ -43,8 +52,9 @@ import { FormAjoutAgendaComponent } from './agenda/form-ajout-agenda/form-ajout-
         NucleoiconsComponent,
         NotificationComponent,
         NgbdModalBasic,
-        AgendaComponent,
-        FormAjoutAgendaComponent,
+        AccueilComponent,
+        FormationComponent,        
+        LoginAuthComponent, DetailFormationComponent, AgendaComponent, 
     ],
     exports:[ ComponentsComponent ]
 })

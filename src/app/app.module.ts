@@ -12,21 +12,18 @@ import { NgxFullCalendarModule } from 'ngx-fullcalendar';
 import { FullCalendarModule } from '@fullcalendar/angular';  // for FullCalendar!
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin
-import { ReactiveFormsModule } from '@angular/forms';
-
-
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
 import { ModuleModule } from './module/module.module';
+import { FooterComponent } from './shared/footer/footer/footer.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     dayGridPlugin,
     interactionPlugin
   ]);
 
-registerLocaleData(localeFr, 'fr');
+  //registerLocaleData(localeFr, 'fr');
 @NgModule({
     declarations: [
         AppComponent,
@@ -48,9 +45,7 @@ registerLocaleData(localeFr, 'fr');
         ModuleModule,
         ReactiveFormsModule
     ],
-    providers: [
-        ToastrService ,
-    ],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
