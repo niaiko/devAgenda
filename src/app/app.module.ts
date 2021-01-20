@@ -17,6 +17,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ModuleModule } from './module/module.module';
 import { FooterComponent } from './shared/footer/footer/footer.component';
+import { AuthentificationService } from './service/authentification/authentification.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     dayGridPlugin,
@@ -28,10 +31,12 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     declarations: [
         AppComponent,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+      
     ],
     imports: [
-        BrowserAnimationsModule,
+  
+    BrowserAnimationsModule,
         NgbModule,
         FormsModule,
         RouterModule,
@@ -43,9 +48,11 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
         NgxFullCalendarModule,
         FullCalendarModule,
         ModuleModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
-    providers: [],
+    providers: [AuthentificationService ],  
+      
     bootstrap: [AppComponent]
 })
 export class AppModule { }

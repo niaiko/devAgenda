@@ -1,29 +1,30 @@
-
-
 <div class="limiter">
     <div class="container-login100" style="background-image: url('../../../../../../assets/img/header.jpg');">
         <div class="wrap-login100 p-t-30 p-b-50">
             <span class="login100-form-title p-b-41">
-                Connectez-vous à votre compte
+                Ajouter nouveau compte
             </span>
-            <form class="login100-form validate-form p-b-33 p-t-5" (ngSubmit)="getConnexToken()">
-
+            <form class="login100-form validate-form p-b-33 p-t-5" (ngSubmit)="ajoutUtilisateur()">
                 <div class="form-group  wrap-input100 validate-input" data-validate = "Nom utilisateur">
-                    <input class="input100  form-control" type="text" name="text" [(ngModel)]="initlog.username"  placeholder="Nom utilisateur" required>                       
+                    <input class="input100  form-control" type="text" name="text" [(ngModel)]="initAdd.username"  placeholder="Nom utilisateur" required>                       
                     <span class="focus-input100" data-placeholder="&#xe82a;"></span>
-                </div>                                   
+                </div> 
+                <div class="form-group  wrap-input100 validate-input" data-validate = "Email">
+                    <input class="input100  form-control" type="email" name="email" [(ngModel)]="initAdd.email"  placeholder="entrer votre adresse email" required>                       
+                    <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    <p *ngIf="this.initAdd.email === '' " class="text-danger">
+                        vérifier l'adresse Email</p> 
+                </div>                    
                 <div class="form-group wrap-input100 validate-input" data-validate="Enter password">
-                    <input class="input100" type="password" name="password" [(ngModel)]="initlog.password" placeholder="entrer votre mot de passe" required>
+                    <input class="input100" type="password" name="password" [(ngModel)]="initAdd.password" placeholder="entrer votre mot de passe" required>
                     <span class="focus-input100" data-placeholder="&#xe80f;"></span>
                 </div>
                 <br>                    
-                <div class="form-group">
-                     
+                <div class="form-group">                     
                         <p *ngIf="this.initAdd.password === '' " class="text-danger">
                             vérifier mot de passe</p>   
                             <p *ngIf="this.initAdd.passwordlenght < 6  " class="text-danger">
-                                Le mot de passe doit comporter au moins 6 caractères</p> 
-                      
+                                Le mot de passe doit comporter au moins 6 caractères</p>                      
                 </div>
                 <div class="container-login100-form-btn m-t-32">
                     <button class="login100-form-btn">
@@ -31,16 +32,11 @@
                     </button>
                 </div>
                 <br>
-                <a href="#" routerLink="/Authentification/nouveau_compte"><p style="text-align:center;color: dodgerblue;">Créer nouveau compte</p></a>
-                <br>
-            
-
+                 
             </form>
-        	
         </div>
     </div>
 </div>
 
 
 <div id="dropDownSelect1"></div>
-

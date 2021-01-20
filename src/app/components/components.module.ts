@@ -28,6 +28,8 @@ import { LoginAuthComponent } from './Authentification/connection/login-auth/log
 import { DetailFormationComponent } from './Formation/detail-information/detail-formation/detail-formation.component';
 import { AgendaComponent } from './Agenda/agenda/agenda.component';
 import { AdminformationComponent } from './Formation/Admin-formation/adminformation/adminformation.component';
+import { ListeutilisateursComponent } from './Formation/AdminUtilisateur/listeutilisateurs/listeutilisateurs.component';
+import { AjoututilisateurComponent } from './Authentification/connection/ajout_utilisateur/ajoututilisateur/ajoututilisateur.component';
 //import { FooterComponent } from 'app/shared/footer/footer/footer.component';
 
 
@@ -55,7 +57,7 @@ import { AdminformationComponent } from './Formation/Admin-formation/adminformat
         NgbdModalBasic,
         AccueilComponent,
         FormationComponent,        
-        LoginAuthComponent, DetailFormationComponent, AgendaComponent, AdminformationComponent, 
+        LoginAuthComponent, DetailFormationComponent, AgendaComponent, AdminformationComponent, ListeutilisateursComponent, AjoututilisateurComponent, 
     ],
     exports:[ ComponentsComponent ]
 })

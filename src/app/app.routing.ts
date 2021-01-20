@@ -13,6 +13,7 @@ import { LoginAuthComponent } from './components/Authentification/connection/log
 import { DetailFormationComponent } from './components/Formation/detail-information/detail-formation/detail-formation.component';
 import { AgendaComponent } from './components/Agenda/agenda/agenda.component';
 import { AdminformationComponent } from './components/Formation/Admin-formation/adminformation/adminformation.component';
+import { AjoututilisateurComponent } from './components/Authentification/connection/ajout_utilisateur/ajoututilisateur/ajoututilisateur.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -24,9 +25,11 @@ const routes: Routes =[
     { path: 'Accueil',component: AccueilComponent },
     { path: 'Formation',component: FormationComponent },
     { path: 'Authentification',component: LoginAuthComponent },
+    { path: 'Authentification/nouveau_compte',component: AjoututilisateurComponent },
     { path: 'Details-formation',component: DetailFormationComponent },
     { path: 'agenda',component: AgendaComponent },
     { path: 'Liste/formation',component: AdminformationComponent },
+    { path: 'Liste/utilisateurs',component: AdminformationComponent },
 
     
 
