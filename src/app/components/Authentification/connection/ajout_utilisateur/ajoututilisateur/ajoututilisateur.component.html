@@ -5,30 +5,30 @@
             <span class="login100-form-title">
                 Ajouter nouveau compte
             </span>
-            <form class="login100-form validate-form p-b-33 p-t-5" (ngSubmit)="ajoutUtilisateur()">
+            <form class="login100-form validate-form p-b-33 p-t-5">
                 <div class="form-group  wrap-input100 validate-input" data-validate = "Nom utilisateur">
                     <input class="input100  form-control" type="text" name="text" [(ngModel)]="initAdd.username"  placeholder="Nom utilisateur" required>                       
                     <span class="focus-input100" data-placeholder="&#xe82a;"></span>
                 </div> 
                 <div class="form-group  wrap-input100 validate-input" data-validate = "Email">
-                    <input class="input100  form-control" type="email" name="email" [(ngModel)]="initAdd.email"  placeholder="entrer votre adresse email" required>                       
-                    <span class="focus-input100" data-placeholder="&#xe82a;"></span>
-                    <p *ngIf="this.initAdd.email === '' " class="text-danger">
-                        vérifier l'adresse Email</p> 
+                    <input type="text" class="input100  form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                    id="email" name="email" [(ngModel)]="initAdd.email"  ngModel #email="ngModel" placeholder="Email">
+              <div *ngIf="email.errors &&(email.touched || email.dirty)" class="aler alert-danger">
+               <div [hidden]="!email.errors?.pattern">
+                Email invalide
+               </div>
+             
+             </div>
+                    <span class="focus-input100" data-placeholder="&#xe82a;"></span>                  
                 </div>                    
                 <div class="form-group wrap-input100 validate-input" data-validate="Enter password">
                     <input class="input100" type="password" name="password" [(ngModel)]="initAdd.password" placeholder="entrer votre mot de passe" required>
                     <span class="focus-input100" data-placeholder="&#xe80f;"></span>
                 </div>
-                <br>                    
-                <div class="form-group">                     
-                        <p *ngIf="this.initAdd.password === '' " class="text-danger">
-                            vérifier mot de passe</p>   
-                            <p *ngIf="this.initAdd.password.lenght < 6 " class="text-danger">
-                                Le mot de passe doit comporter au moins 6 caractères</p>                     
-                </div>
+                <br>                   
+            
                 <div class="container-login100-form-btn m-t-32">
-                    <button class="login100-form-btn">
+                    <button class="login100-form-btn" (click)="ajoutUtilisateur()" [hidden]="email.errors?.pattern">
                         Enregistrer
                     </button>
 

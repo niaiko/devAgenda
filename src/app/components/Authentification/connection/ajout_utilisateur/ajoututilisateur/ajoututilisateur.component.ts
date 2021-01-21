@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthentificationService } from 'app/service/authentification/authentification.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl,  Validators, EmailValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-ajoututilisateur',
@@ -18,6 +19,7 @@ export class AjoututilisateurComponent implements OnInit {
   constructor(private authservice:AuthentificationService,private router: Router) { }
   resAddutilisateur:any;
   ngOnInit(): void {
+   
   }
 
 
