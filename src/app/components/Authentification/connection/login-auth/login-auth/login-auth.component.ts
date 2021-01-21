@@ -48,16 +48,20 @@ export class LoginAuthComponent implements OnInit {
 
       var navbar = document.getElementsByTagName('nav')[0];
       navbar.classList.add('navbar-transparent');
-
+      // this.getLog();
       /*Function */
-     this.token = localStorage.getItem('id_token');
+      this.token;
+      this.getlisteutilisateurs();
        
   }
+
+
+
+
 
   ngOnDestroy(){
       var body = document.getElementsByTagName('body')[0];
       body.classList.remove('login-page');
-
       var navbar = document.getElementsByTagName('nav')[0];
       navbar.classList.remove('navbar-transparent');
   }
@@ -65,41 +69,50 @@ export class LoginAuthComponent implements OnInit {
 
 
 
-     
-     getConnexToken(){ 
+     a:any;
+  getConnexToken(){   
+        this.getLog(); 
+        this.a = this.lognai;
+        console.log("Atsipiazo token ==>",this.a);
+        this.a = this.token;
+        // this.token = localStorage.getItem('id_token');
+        // console.log("local storage ==> ",this.token) 
         
         this.authservice.getlisteutilisateurs(this.token).subscribe(res => {
         this.resAddutilisateur = res; 
         console.log("*res add *",res); 
-        this.getLog();
-     
+           
    })
 
+ 
  
  
   
 
   }
 
-  getLog(){
+   lognai = 100;
+   
+  getLog(){  
     this.authservice.getToken(this.initlog).subscribe(res => {
-      this.reslog = res ;
+       this.reslog = res ;
+       this.token = localStorage.setItem ('token', this.reslog);
       console.log("LOG token ==>",this.reslog);   
+      this.getlisteutilisateurs();;
 
-    })
+    });
   }
 
-  // getlisteutilisateur(){
-  //   this.token = this.reslog;
-  //   this.authservice.getlisteutilisateurs(this.token).subscribe(res =>{ 
-  //   console.log("token",this.token);  
-  //   this.resutilisateurs = res.body;
-  //   console.log("Liste utilisaterus",this.resutilisateurs);
-     
+  listeuti:any;
+  getlisteutilisateurs() {
+   this.authservice.getlisteutilisateurs(this.token).subscribe(res => {
+     this.listeuti = res;
+   console.log("Liste token utilisateurs==>",res);
 
-  //   })
+   })
 
-  // }
+
+  }
 
   validateForm() {
     if (this.initAdd.email === "") {
