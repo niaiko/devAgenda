@@ -39,6 +39,7 @@ export class LoginAuthComponent implements OnInit {
  
   error: { name: string, message: string } = { name: '', message: '' };
   message = '';
+  showError: boolean = false;
 
 
   constructor(private authservice:AuthentificationService,private router: Router,  ) { }
@@ -94,29 +95,19 @@ export class LoginAuthComponent implements OnInit {
 
    lognai = 100;
    stathttp:boolean;
-  getLog(){
+   getLog(){
+    console.log("alefa ", this.initlog)
       this.authservice.getToken(this.initlog).subscribe(res => {
-    //     const status = res;   
-    //     console.log("jereo status ==>",status);     
-    //     if (status == 200) {
-    //       this.stathttp = true;
-    //       this.reslog = res ;
-    //       this.token = localStorage.setItem ('token', this.reslog);
-    //       console.log("LOG token ==>",this.reslog);
-         
-        
-    //     }else 
-    //     {
-    //       this.stathttp = false;
-    //       console.log("Erreur connection ve",this.stathttp);
-
-    //     }
-    // })
-    this.stathttp = true;
-    this.reslog = res ;
-    this.token = localStorage.setItem ('token', this.reslog);
-    console.log("LOG token ==>",this.reslog);
-     
+        if(!res.success){
+          this.showError = true;
+        }else{
+          this.showError = false;
+          this.stathttp = true;
+          this.reslog = res ;
+          this.token = localStorage.setItem ('token', this.reslog);
+          console.log("LOG token ==>",this.reslog);
+          this.router.navigate[('/AccueilComponent')]
+        }
   });
      
  

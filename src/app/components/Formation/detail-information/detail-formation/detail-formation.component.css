@@ -1,132 +1,135 @@
 .wrapperdiv {
-    position:relative;
-    /* other properties */
+  position: relative;
+  /* other properties */
 }
 .shadowdiv {
-    position: absolute;
-    margin-left: 50%;
-    width: 400px;
-    left: -200px;
-    /* other properties */
+  position: absolute;
+  margin-left: 50%;
+  width: 400px;
+  left: -200px;
+  /* other properties */
 }
 
-fieldset 
-{
-    border: 1px solid #ddd !important;
-    margin: 0;
-    padding: 10px;       
-    position: relative;
-    border-radius:4px;
-    background-color:#f5f5f5;
-    padding-left:10px!important;
-}	
+fieldset {
+  border: 1px solid #ddd !important;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  padding-left: 10px !important;
+}
 
-    legend
-    {
-        font-size:14px;
-        font-weight:bold;
-        margin-bottom: 0px; 
-        width: 35%; 
-        border: 1px solid #ddd;
-        border-radius: 4px; 
-        padding: 5px 5px 5px 10px; 
-        background-color: #ffffff;
-    }
+legend {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  width: 35%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 5px 5px 10px;
+  background-color: #ffffff;
+}
 
-    /* Font Imports ************************************************************* */
-@import url('https://fonts.googleapis.com/css?family=Oxygen');
+/* Font Imports ************************************************************* */
+@import url("https://fonts.googleapis.com/css?family=Oxygen");
 
 /* Gradient Header Styling ************************************************** */
 #gradient-header {
-    background: linear-gradient(110deg, #7C99B4, #161B33);
+  background: linear-gradient(110deg, #7c99b4, #161b33);
 }
 #gradient-footer {
-    background: linear-gradient(110deg, #161B33, #7C99B4);
+  background: linear-gradient(110deg, #161b33, #7c99b4);
 }
 
 /* Defining Font Families *************************************************** */
 .f-prime {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.f-second, .f-third {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: normal;
+.f-second,
+.f-third {
+  font-family: "Oxygen", sans-serif;
+  font-weight: normal;
 }
 
 /* Defining Font Sizing ***************************************************** */
 .large {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 .med {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 .sml {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 /* Defining Font Colors ***************************************************** */
 .primes {
-    color: #172A3A;
+  color: #172a3a;
 }
 .seconds {
-    color: #4C5C68;
+  color: #4c5c68;
 }
 .thirds {
-    color: #A0B9BF;
+  color: #a0b9bf;
 }
 
 /* Card Styling ************************************************************* */
 .card {
-    background-color: transparent;
-    border: 0px;
+  background-color: transparent;
+  border: 0px;
 }
 .card .thumbnail {
-    background-color: #FFFFFF;
-    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
-    border: 0px;
-    border-radius: 0px;
-    padding: 0px;
-    text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  text-align: center;
 }
 .card .thumbnail .caption {
-    background: linear-gradient(45deg, #4C5C68, #A0B9BF);
-    margin: -20px 20px 20px 20px;
-    padding: 19px 29px 19px 29px;
-    position: relative;
-    border: 0px;
+  background: linear-gradient(45deg, #4c5c68, #a0b9bf);
+  margin: -20px 20px 20px 20px;
+  padding: 19px 29px 19px 29px;
+  position: relative;
+  border: 0px;
 }
 .card .thumbnail .caption hr {
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    margin: 20px 40px;
+  border-top: 1px solid rgba(8, 33, 116, 0.25);
+  margin: 20px 40px;
 }
 .card .thumbnail .caption p {
-    font-weight: normal;
-    font-size: 0.8rem;
-    color: #FFFFFF;
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #ffffff;
 }
 .card .thumbnail .caption .btn-card {
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-    font-weight: normal;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 0.25rem 1.25rem;
-    color: #FFFFFF;
-    transition: 0.5s ease;
-    border-radius: 0px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  font-weight: normal;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.25rem 1.25rem;
+  color: #ffffff;
+  transition: 0.5s ease;
+  border-radius: 0px;
 }
 .card .thumbnail .caption .btn-card:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid #FFFFFF;
-    color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff;
+  color: #ffffff;
 }
 .card .thumbnail img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+}
+
+.mat-input{
+    color: rgb(17, 14, 14);
 }
 
 /* ************************************************************************** */
