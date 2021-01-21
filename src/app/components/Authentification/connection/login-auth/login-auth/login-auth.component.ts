@@ -96,35 +96,31 @@ export class LoginAuthComponent implements OnInit {
    stathttp:boolean;
   getLog(){
       this.authservice.getToken(this.initlog).subscribe(res => {
-        const status = res.status;        
-        if (status == 200) {
-          this.reslog = res ;
-          this.token = localStorage.setItem ('token', this.reslog);
-          console.log("LOG token ==>",this.reslog);
-          this.stathttp = true;
-        }else 
-        {
-          this.stathttp = false;
-          console.log("Erreur connection ve",this.stathttp);
-
-        }
-    }, error => { const status = error.status;
-      if (status != 404 && status != 403 && status != 0) {
-              this.stathttp = false;
-              console.log("Erreur connection ve",this.stathttp)
-      }
-      else 
-      {
-        this.stathttp = false;
-        console.log("Erreur connection ve",this.stathttp);
+    //     const status = res;   
+    //     console.log("jereo status ==>",status);     
+    //     if (status == 200) {
+    //       this.stathttp = true;
+    //       this.reslog = res ;
+    //       this.token = localStorage.setItem ('token', this.reslog);
+    //       console.log("LOG token ==>",this.reslog);
+         
         
-      }
-    });
-      this.getlisteutilisateurs();;
-    }
+    //     }else 
+    //     {
+    //       this.stathttp = false;
+    //       console.log("Erreur connection ve",this.stathttp);
+
+    //     }
+    // })
+    this.stathttp = true;
+    this.reslog = res ;
+    this.token = localStorage.setItem ('token', this.reslog);
+    console.log("LOG token ==>",this.reslog);
+     
+  });
      
  
-
+  }
 
 
   listeuti:any;
