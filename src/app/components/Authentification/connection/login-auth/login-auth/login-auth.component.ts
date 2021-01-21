@@ -3,6 +3,7 @@ import { AuthentificationService } from './../../../../../service/authentificati
 import { getLocaleWeekEndRange } from '@angular/common';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login-auth',
   templateUrl: './login-auth.component.html',
@@ -40,7 +41,7 @@ export class LoginAuthComponent implements OnInit {
   message = '';
 
 
-  constructor(private authservice:AuthentificationService,private router: Router) { }
+  constructor(private authservice:AuthentificationService,private router: Router,  ) { }
 
   ngOnInit() {
       var body = document.getElementsByTagName('body')[0];
@@ -92,16 +93,39 @@ export class LoginAuthComponent implements OnInit {
   }
 
    lognai = 100;
-   
-  getLog(){  
-    this.authservice.getToken(this.initlog).subscribe(res => {
-       this.reslog = res ;
-       this.token = localStorage.setItem ('token', this.reslog);
-      console.log("LOG token ==>",this.reslog);   
-      this.getlisteutilisateurs();;
+   stathttp:boolean;
+  getLog(){
+      this.authservice.getToken(this.initlog).subscribe(res => {
+        const status = res.status;        
+        if (status == 200) {
+          this.reslog = res ;
+          this.token = localStorage.setItem ('token', this.reslog);
+          console.log("LOG token ==>",this.reslog);
+          this.stathttp = true;
+        }else 
+        {
+          this.stathttp = false;
+          console.log("Erreur connection ve",this.stathttp);
 
+        }
+    }, error => { const status = error.status;
+      if (status != 404 && status != 403 && status != 0) {
+              this.stathttp = false;
+              console.log("Erreur connection ve",this.stathttp)
+      }
+      else 
+      {
+        this.stathttp = false;
+        console.log("Erreur connection ve",this.stathttp);
+        
+      }
     });
-  }
+      this.getlisteutilisateurs();;
+    }
+     
+ 
+
+
 
   listeuti:any;
   getlisteutilisateurs() {

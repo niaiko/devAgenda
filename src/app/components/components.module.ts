@@ -17,10 +17,6 @@ import { TypographyComponent } from './typography/typography.component';
 import { NucleoiconsComponent } from './nucleoicons/nucleoicons.component';
 import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
-
-
-
-
 import { NgbdModalBasic } from './modal/modal.component';
 import { AccueilComponent } from './Accueill/accueil/accueil.component';
 import { FormationComponent } from './Formation/formation/formation.component';
@@ -45,7 +41,8 @@ import { AjoututilisateurComponent } from './Authentification/connection/ajout_u
         NgxFullCalendarModule,
         NgxSelectModule,
         ModuleModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+    
       ],
     declarations: [
         ComponentsComponent,

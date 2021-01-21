@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // this is needed!
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
@@ -51,7 +51,10 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
         ReactiveFormsModule,
         HttpClientModule
     ],
-    providers: [AuthentificationService ],  
+    providers: [AuthentificationService
+   
+    
+    ],  
       
     bootstrap: [AppComponent]
 })
